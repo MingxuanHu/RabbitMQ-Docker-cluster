@@ -40,3 +40,8 @@ services:
     volumes:
       - "~/rabbitmq.config:/etc/rabbitmq/rabbitmq.config"
       - "~/definitions.json:/etc/rabbitmq/definitions.json"
+      
+networks:
+  default:
+    external:
+      name: rabbitmq-cluster
